@@ -116,6 +116,7 @@ c'est le test test_is_valid_title_rejects_too_long() qui a fait une erreur. lign
 > 📸 **TP1-7 :** le `README.md` sur GitHub avec le badge affiché.
 
 **Question (à traiter dans le dossier) :** Pourquoi attend-on que la CI soit verte avant de fusionner ?
+Pour être sur que tout les test soit passés
 
 ---
 
