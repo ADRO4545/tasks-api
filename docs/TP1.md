@@ -94,6 +94,10 @@ puis recommencez le `git push`.
 
 **Questions (à traiter dans le dossier) :** Quel test a échoué ? À quelle ligne ? Qu'est-ce qui a permis de le trouver rapidement ?
 
+\*\*La partie de test pour la longueur du titre, il y a plusieurs fois des test avec des titres supérieurs à 5 caractères ce qui fait planter les test\*\*
+
+c'est le test test_is_valid_title_rejects_too_long() qui a fait une erreur. ligne 20
+
 ---
 
 ## Partie 4 : Pull request et badge (45 min)
