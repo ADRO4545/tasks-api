@@ -12,5 +12,11 @@ jobs:
           python-version: "3.12"
       - run: echo "test automatique"
       - run: pip install -r requirements-dev.txt
-      - run: pytest
+      - run: pytest --cov=app --cov-fail-under=80
       - run: python --version
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - run: flake8.
+      - run: black --check .
