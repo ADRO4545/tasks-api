@@ -17,10 +17,14 @@ jobs:
           cache: pip
           cache-dependency-path: requirements-dev.txt
       - run: echo "test automatique"
+      - run: pip install -r requirements-dev.txt
       - run: pytest --cov=app --cov-fail-under=80 --cov-report=xml
       - run: python --version
-      - uses: actions/upload-artifact@v7
+      - uses: actions/upload-artifact@v4
         if: matrix.python-version == '3.12'
+        with:
+          name: coverage-report
+          path: coverage.xml
   lint:
     runs-on: ubuntu-latest
     strategy:
@@ -34,5 +38,6 @@ jobs:
           python-version: ${{ matrix.python-version}}
           cache: pip
           cache-dependency-path: requirements-dev.txt
+      - run: pip install -r requirements-dev.txt
       - run: flake8 .
       - run: black --check .
