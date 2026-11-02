@@ -19,11 +19,11 @@ et vous savez lire un run GitHub Actions, y compris quand il échoue.
 
 ### Les commandes qui changent selon votre système
 
-| Action | macOS | Linux | Windows (PowerShell) |
-|---|---|---|---|
-| Créer l'environnement | `python3.12 -m venv .venv` | `python3 -m venv .venv` | `py -3.12 -m venv .venv` |
-| L'activer | `source .venv/bin/activate` | `source .venv/bin/activate` | `.venv\Scripts\Activate.ps1` |
-| Appeler l'API | `curl http://localhost:8000/health` | `curl http://localhost:8000/health` | `curl.exe http://localhost:8000/health` |
+| Action                | macOS                               | Linux                               | Windows (PowerShell)                    |
+| --------------------- | ----------------------------------- | ----------------------------------- | --------------------------------------- |
+| Créer l'environnement | `python3.12 -m venv .venv`          | `python3 -m venv .venv`             | `py -3.12 -m venv .venv`                |
+| L'activer             | `source .venv/bin/activate`         | `source .venv/bin/activate`         | `.venv\Scripts\Activate.ps1`            |
+| Appeler l'API         | `curl http://localhost:8000/health` | `curl http://localhost:8000/health` | `curl.exe http://localhost:8000/health` |
 
 Tout le reste (`git`, `gh`, `pytest`, `pip`) est identique sur les trois systèmes.
 
@@ -56,6 +56,8 @@ puis recommencez le `git push`.
 > 📸 **TP1-1 :** le run « Hello » réussi, avec l'étape qui affiche la branche et l'auteur **dépliée**.
 
 **Questions (à traiter dans le dossier) :** Combien de temps a duré le run ? Où voit-on les logs de chaque étape ?
+
+**Le run à duré 6 sec, on voit les logs dans la partie actions de github et ensuite dans le détails du workflow **
 
 > Indice : la structure minimale est `name`, `on`, `jobs`, puis `runs-on` et `steps`.
 
@@ -91,6 +93,10 @@ puis recommencez le `git push`.
 > 📸 **TP1-4 :** le run vert qui suit la correction.
 
 **Questions (à traiter dans le dossier) :** Quel test a échoué ? À quelle ligne ? Qu'est-ce qui a permis de le trouver rapidement ?
+
+\*\*La partie de test pour la longueur du titre, il y a plusieurs fois des test avec des titres supérieurs à 5 caractères ce qui fait planter les test\*\*
+
+c'est le test test_is_valid_title_rejects_too_long() qui a fait une erreur. ligne 20
 
 ---
 
