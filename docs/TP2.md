@@ -50,6 +50,8 @@ Un linter permet de détecter des erreurs sans execution alors que le formateur 
 
 **Questions :** Pourquoi tester sur plusieurs versions de Python ? Que gagne-t-on avec le cache ? Un artefact, c'est quoi ?
 
+Pour être sur qu'au moins 1 fonctionne. Le cache permet de ne pas recharger les dépendances à chaque fois. Un artefact est un fichier stocké contenant des informations pour pouvoir les récupérer plus tard
+
 ---
 
 ## Partie 3 : Protéger la branche main (15 min)
