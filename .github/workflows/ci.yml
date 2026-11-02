@@ -13,3 +13,4 @@ jobs:
       - run: echo "test automatique"
       - run: pip install -r requirements-dev.txt
       - run: pytest
+      - run: python --version
