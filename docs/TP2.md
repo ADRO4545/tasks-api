@@ -31,7 +31,7 @@ cache, protection de la branche `main`, travail à deux sur un même dépôt et 
 
 **Questions :** Quelle différence entre un linter (flake8) et un formateur (black) ? Pourquoi séparer `lint` et `test` en deux jobs ?
 
-Un linter permet de détecter des erreurs sans execution alors que le formateur permet de se faire ressemvbler toutes les lignes. Pour pouvoir séparer les erreurs car si 1 étape ne passe pas alors rien ne passe
+**Un linter permet de détecter des erreurs sans execution alors que le formateur permet de se faire ressemvbler toutes les lignes. Pour pouvoir séparer les erreurs car si 1 étape ne passe pas alors rien ne passe**
 
 ---
 
@@ -50,7 +50,7 @@ Un linter permet de détecter des erreurs sans execution alors que le formateur 
 
 **Questions :** Pourquoi tester sur plusieurs versions de Python ? Que gagne-t-on avec le cache ? Un artefact, c'est quoi ?
 
-Pour être sur qu'au moins 1 fonctionne. Le cache permet de ne pas recharger les dépendances à chaque fois. Un artefact est un fichier stocké contenant des informations pour pouvoir les récupérer plus tard
+**Pour être sur qu'au moins 1 fonctionne. Le cache permet de ne pas recharger les dépendances à chaque fois. Un artefact est un fichier stocké contenant des informations pour pouvoir les récupérer plus tard**
 
 ---
 
@@ -67,6 +67,7 @@ Pour être sur qu'au moins 1 fonctionne. Le cache permet de ne pas recharger les
 > 📸 **TP2-6 :** une PR dont la fusion est bloquée par une vérification en échec.
 
 **Question :** Pourquoi interdire de pousser directement sur `main` ?
+**Pour éviter de casser la production qui est relié sur le repo. Cela permet aussi de s'assurer de pouvoir regrouper les changements sur la main.**
 
 ---
 
