@@ -133,6 +133,9 @@ Dans le dossier `pipelines-a-reparer/` : trois workflows (A, B, C) avec **un bug
 > 📸 **TP2-11 :** la liste des runs montrant vos trois pipelines réparés au vert.
 
 **Questions :** Pour chaque pipeline : quel était le bug, comment l'avez-vous trouvé, comment l'éviter à l'avenir ?
+1: problème d'indentation, apparait en rouge dans mon éditeur de code et pour l'exciter, il suffisait de regarder les log pour voir qu'il manquait 1 espace. On aurait pu l'eviter en utilisant un linter
+2: manque l'importation de tout le reste du code du projet. Le fichier n'est pas trouvé car pas importé. Pour éviter ça toujours prendre une même base et rajouter des élèments par dessus
+3: manque des guillemets autour du numéro de version de python donc 3.10 lu 3.1 Toujours vérifier avant de mettre en ligne
 
 ---
 
