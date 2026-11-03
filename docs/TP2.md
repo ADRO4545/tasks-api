@@ -100,6 +100,8 @@ git push
 
 **Questions :** Pourquoi Git ne peut-il pas résoudre ce conflit seul ? Qu'est-ce qui a vérifié le code après la résolution ?
 
+**Il y a un choix entre plusieurs codes possible donc git ne peut pas choisir. L'humain à vérifier le code après la résolution en même temps que les tests**
+
 ---
 
 ## Partie 5 : Un secret dans le pipeline (20 min)
@@ -118,6 +120,8 @@ git push
 > ⚠️ Ne mettez **jamais** un vrai secret dans une capture ou dans le code.
 
 **Questions :** Pourquoi GitHub masque-t-il le secret ? Que se passe-t-il si on le commite dans le dépôt ? Secret ou variable : comment choisir ?
+
+\*\*Un secret est secret donc ne doit pas être lisible dans les logs. Des bots récupère les tokens et utiliser les services reliés dessus. Secret : informations secrètes. Variables : stocker des variables non sensible
 
 ---
 
