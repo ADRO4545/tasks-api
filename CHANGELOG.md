@@ -2,6 +2,6 @@
 
 ## Non publié
 
-changement A de cassage
+changement B de cassage
 
 - Version initiale de l'API tasks-api.
