@@ -4,10 +4,10 @@
 # ---------------------------------------------------------------
 
 # TODO 1 : choisir une image de base Python légère (python:3.12-slim)
-FROM ???
+#FROM ???
 
 # TODO 2 : définir le dossier de travail /app
-WORKDIR ???
+#WORKDIR ???
 
 # TODO 3 : copier requirements.txt AVANT le code (pour profiter du cache),
 #          puis installer les dépendances avec pip (--no-cache-dir)
@@ -22,3 +22,16 @@ WORKDIR ???
 #          - exposer le port 8000 (EXPOSE)
 #          - lancer l'app avec gunicorn :
 #            gunicorn --bind 0.0.0.0:8000 app.main:app
+
+FROM python:3.12-slim
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY app/ app/
+RUN useradd -m appuser && chown -R appuser /app
+USER appuser
+ARG APP_VERSION=dev
+ENV APP_VERSION=${APP_VERSION}
+EXPOSE 8000
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "app.main:app"]
+
