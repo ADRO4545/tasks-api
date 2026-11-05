@@ -95,6 +95,8 @@ Poussez sur `main`, puis allez voir votre profil GitHub → **Packages**.
 
 **Questions :** Pourquoi `build` attend-il `test` ? Pourquoi éviter le tag `latest` en production ?
 
+Il faut que le code soit testé avant d'être construit. Le tag latest ne permet pas de savoir sur quelle version est arrivé le bug.
+
 ---
 
 ## Partie 4 : Une release par un tag Git (30 min)
@@ -119,6 +121,7 @@ docker run --rm -p 8000:8000 ghcr.io/<votre-compte-minuscules>/tasks-api:0.1.0
 > 📸 **TP3-6 :** `docker run` de l'image **téléchargée depuis GHCR** et `curl /version` qui répond `0.1.0`.
 
 **Question :** Quel est l'avantage d'une image versionnée par rapport à « le code de ma machine » ?
+Une image versionnée permet de revenir facilement à une version précise / précédente.
 
 ---
 
@@ -137,6 +140,7 @@ Créez `v0.1.1` (nouveau tag) : le pipeline passe sur staging, puis **attend vot
 > 📸 **TP3-7 :** le run en attente d'approbation (« Waiting » / « Review deployments »), puis le run terminé.
 
 **Questions :** À quoi sert un test de fumée ? Pourquoi demander une approbation humaine avant la production ?
+Un test de fumée permet de tester des fonctions de base qui indique rapidement si il y a un problème ou non. L'aprobation humaine permet de vérifier une dernière fois avant la production
 
 ---
 
