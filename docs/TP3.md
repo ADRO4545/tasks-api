@@ -154,6 +154,8 @@ Un test de fumée permet de tester des fonctions de base qui indique rapidement 
 
 **Question :** Pourquoi ne pas exécuter une application en root dans un conteneur ?
 
+Ne pas mettre l'application en root permet de limiter son execution à des possibilités restreintes. principe de moindre responsabilité.
+
 ---
 
 ## Préparer demain (10 min)
