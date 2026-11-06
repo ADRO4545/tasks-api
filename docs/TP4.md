@@ -111,6 +111,8 @@ Objectif : un tag `v0.2.0` sur le dépôt applicatif doit aboutir à la nouvelle
 > 📸 **TP4-10 :** `/version` qui répond `0.2.0`.
 
 **Questions :** Résumez en 5 lignes le chemin d'un `git tag` jusqu'au pod. Qui pousse (push) et qui tire (pull) ? Quelle différence avec un déploiement CI/CD « classique » ?
+git tag déclenche la CI -> Nouvelle image docker et push sur github -> CI met à jour le numéro de version -> ARGO cd détecte la nouvelle version et met à jour -> Argo Cd donne l'ordre de mettre à jour les pods à lkubernetes
+La CI push et la CD pull
 
 ---
 
