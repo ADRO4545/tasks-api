@@ -67,6 +67,8 @@ kubectl get pods -n tasks -w     # Ctrl + C pour quitter
 
 **Question :** Pourquoi sépare-t-on le dépôt de l'application et le dépôt de configuration ?
 
+La séparation permet une meilleure sécurité car 2 types de personne peuvent travailler en même temps dessus sans se gener. Devops et developpeur. Cela permet également de ne pas avoir besoin de tout rebuild si il est néecessaire de mettre une autre valeur de pods
+
 ---
 
 ## Partie 3 : Le GitOps en action (25 min)
@@ -84,6 +86,7 @@ Observez : Argo CD détecte l'écart et **remet 3** (c'est `selfHeal`).
 > 📸 **TP4-7 :** l'historique des commits de `tasks-config` avec le `revert`, et le retour à 2 pods.
 
 **Questions :** Que signifie `selfHeal` ? Pourquoi le retour arrière est-il simple en GitOps ?
+Selfheal est un mécanisme qui permet de garantir que le cluster respecte toujours ce qui est inscrit dans git. Le retour en arrière se fait par un simple git revert et derrière c'est simplement argo cd qui s'occupe de tout
 
 ---
 
